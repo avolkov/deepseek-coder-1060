@@ -14,7 +14,7 @@ HOWEVER, if you follow the steps exactly, you will run out of memory.
 
 Use this repo instead if you want to run this very slowly on a low memory system.
 
-I skip the regular spiel about virtualenvs, but installing this in clean virtualen helps. I tried this with Python 3.12.2
+I skip the regular spiel about virtualenvs, but installing this in clean virtualen helps. I tried this with Python 3.12.7
 
 I created a virtual environment with pyenv
 
