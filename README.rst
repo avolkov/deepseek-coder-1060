@@ -8,18 +8,17 @@ Deepseek Code has very nice tutorial on their `github page <https://github.com/d
 
 Follow the steps: install the requirements and past the commands in jupyter notebook.
 
-If you want some handholding this video is very helpful -- https://www.youtube.com/watch?v=rlxsDC9aza0
+If you want some handholding this video is very helpful -- `DeepSeek Coder v2 Lite Instruct - Local Installation - Beats GPT-4 In Coding <https://www.youtube.com/watch?v=rlxsDC9aza0>`
 
-HOWEVER, you will run out of memory.
+HOWEVER, if you follow the steps exactly, you will run out of memory.
 
 Use this repo instead if you want to run this very slowly on a low memory system.
 
- I skip the regular warning about virtualenvs, this worked great with python 3.12.2
-
+I skip the regular spiel about virtualenvs, but installing this in clean virtualen helps. I tried this with Python 3.12.2
 
 Just install the requirements -- :code:`pip install -r requirements.txt`.
 
-:code:`accelerate` is needed to enable memory management so models can be loaded in parts. 
+:code:`accelerate` package is needed to enable memory management so models can be loaded in parts. One of the errors in Error log below says so.
 
 then run the notebook  with
 
@@ -34,7 +33,7 @@ This command downloads the models. My average speed on 500Mbit connection was 42
     from transformers import AutoTokenizer, AutoModelForCausalLM
     import torch
     tokenizer = AutoTokenizer.from_pretrained("deepseek-ai/deepseek-coder-6.7b-base", trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained("deepseek-ai/deepseek-coder-6.7b-base", trust_remote_code=True, torch_dtype=torch.bfloat16, device_map="auto").cuda()
+    model = AutoModelForCausalLM.from_pretrained("deepseek-ai/deepseek-coder-6.7b-base", trust_remote_code=True, torch_dtype=torch.bfloat16, device_map="auto")
 
 Then I ran a sample query
 
@@ -47,7 +46,7 @@ Then I ran a sample query
 
 On my system I got received quick sort algorithm example in about 5 minutes. lol
 
-.. code-block:: python
+.. code-block:: console
 
     #write a quick sort algorithm
 
@@ -85,8 +84,9 @@ OutOfMemory error.
 Next error
 ----------
 
+Running this original code sample
 
-.. code-block:: console
+.. code-block:: python
 
     from transformers import AutoTokenizer, AutoModelForCausalLM
     import torch
@@ -96,7 +96,7 @@ Next error
 
 causes this error
 
-..code-block:: console
+.. code-block:: console
 
     ImportError: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerate: `pip install 'accelerate>=0.26.0'`
 
