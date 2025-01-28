@@ -16,6 +16,12 @@ Use this repo instead if you want to run this very slowly on a low memory system
 
 I skip the regular spiel about virtualenvs, but installing this in clean virtualen helps. I tried this with Python 3.12.2
 
+I created a virtual environment with pyenv
+
+.. code-block:: console
+
+    pyenv virtualenv 3.12.7  deepseek-instruct
+
 Just install the requirements -- :code:`pip install -r requirements.txt`.
 
 :code:`accelerate` package is needed to enable memory management so models can be loaded in parts.
