@@ -8,7 +8,7 @@ Deepseek Code has very nice tutorial on their `github page <https://github.com/d
 
 Follow the steps: install the requirements and past the commands in jupyter notebook.
 
-If you want some handholding this video is very helpful -- `DeepSeek Coder v2 Lite Instruct - Local Installation - Beats GPT-4 In Coding <https://www.youtube.com/watch?v=rlxsDC9aza0>`
+If you want some handholding this video is very helpful -- `DeepSeek Coder v2 Lite Instruct - Local Installation - Beats GPT-4 In Coding <https://www.youtube.com/watch?v=rlxsDC9aza0>`_
 
 HOWEVER, if you follow the steps exactly, you will run out of memory.
 
@@ -18,7 +18,7 @@ I skip the regular spiel about virtualenvs, but installing this in clean virtual
 
 Just install the requirements -- :code:`pip install -r requirements.txt`.
 
-:code:`accelerate` package is needed to enable memory management so models can be loaded in parts. One of the errors in Error log below says so.
+:code:`accelerate` package is needed to enable memory management so models can be loaded in parts.
 
 then run the notebook  with
 
